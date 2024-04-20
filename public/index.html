@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Task Manager</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+<body>
+
+<h1>Task Manager    </h1>
+
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Add Task</h2>
+    <form id="taskForm">
+        <label for="task">Task:</label><br>
+        <input type="text" id="task" name="task" required><br>
+        <label for="date">Date:</label><br>
+        <input type="date" id="date" name="date" required><br>
+        <label for="status">Status:</label><br>
+        <select id="status" name="status">
+            <option value="todo">To Do</option>
+            <option value="inprogress">In Progress</option>
+            <option value="completed">Completed</option>
+        </select><br><br>
+        <button type="submit">Add Task</button>
+    </form>
+  </div>
+</div>
+
+<button id="addTaskBtn">Add Task</button>
+
+
+
+<div class="calendar">
+    <div class="header">
+        <div class="month-year-selector">
+            <select id="month" onchange="changeCalendar()"></select>
+            <select id="year" onchange="changeCalendar()"></select>
+        </div>
+    </div>
+    <table class="calendar-table">
+        <thead>
+            <tr>
+                <th>Sun</th>     
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+            </tr>
+        </thead>
+        <tbody id="calendar-body"></tbody>
+    </table>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
